@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -13,6 +14,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.purprup.tutorialmod.TutorialMod;
 
 import java.util.function.Function;
@@ -22,14 +24,28 @@ public class ModBlocks
     public static final Block RUBY_BLOCK = registerBlockItem(
             "ruby_block",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            AbstractBlock.Settings.create().strength(1f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
 
     public static final Block RAW_RUBY_BLOCK = registerBlockItem(
             "raw_ruby_block",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            AbstractBlock.Settings.create().strength(1f).requiresTool(),
+            true
+    );
+
+    public static final Block RUBY_ORE = registerBlockItem(
+            "ruby_ore",
+            Block::new,
+            AbstractBlock.Settings.create().strength(1f).requiresTool(),
+            true
+    );
+
+    public static final Block RUBY_DEEPSLATE_ORE = registerBlockItem(
+            "ruby_deepslate_ore",
+            Block::new,
+            AbstractBlock.Settings.create().strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
             true
     );
 
@@ -51,10 +67,10 @@ public class ModBlocks
         if (shouldRegisterItem) {
             // Items need to be registered with a different type of registry key, but the ID
             // can be the same.
-            RegistryKey<Item> itemKey = keyOfItem(name);
 
-            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
-            Registry.register(Registries.ITEM, itemKey, blockItem);
+            Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name),
+                    new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, name)))));
         }
 
         return Registry.register(Registries.BLOCK, blockKey, block);
