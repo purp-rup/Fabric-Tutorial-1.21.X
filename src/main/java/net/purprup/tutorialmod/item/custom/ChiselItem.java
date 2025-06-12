@@ -12,6 +12,8 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 import net.purprup.tutorialmod.block.ModBlocks;
+import net.purprup.tutorialmod.component.ModDataComponentTypes;
+import net.purprup.tutorialmod.sound.ModSounds;
 
 import java.util.Map;
 
@@ -49,7 +51,10 @@ public class ChiselItem extends Item
                 context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
-                world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
+                world.playSound(null, context.getBlockPos(), ModSounds.CHISEL_USE, SoundCategory.BLOCKS, 3f, 1f);
+
+                // Saves coordinates of block that was chisel was last used on, can also save a lot of other information
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             }
         }
 

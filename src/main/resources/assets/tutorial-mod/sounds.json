@@ -1,0 +1,8 @@
+{
+  "chisel_use": {
+    "subtitle": "sounds.tutorial-mod.chisel_use",
+    "sounds": [
+      "tutorial-mod:chisel_use"
+    ]
+  }
+}
