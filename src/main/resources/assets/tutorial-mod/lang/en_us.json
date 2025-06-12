@@ -3,10 +3,16 @@
   "item.tutorial-mod.raw_ruby": "Raw Ruby",
   "item.tutorial-mod.chisel": "Chisel",
 
+  "item.tutorial-mod.ruby_helmet": "Ruby Helmet",
+  "item.tutorial-mod.ruby_chestplate": "Ruby Chestplate",
+  "item.tutorial-mod.ruby_leggings": "Ruby Leggings",
+  "item.tutorial-mod.ruby_boots": "Ruby Boots",
+
   "block.tutorial-mod.ruby_block": "Ruby Block",
   "block.tutorial-mod.raw_ruby_block": "Raw Ruby Block",
   "block.tutorial-mod.ruby_ore": "Ruby Ore",
   "block.tutorial-mod.ruby_deepslate_ore": "Ruby Deepslate Ore",
+  "block.tutorial-mod.pink_garnet_lamp": "Pink Garnet Lamp",
 
   "itemgroup.tutorialmod.ruby_items": "Ruby Items",
   "itemgroup.tutorialmod.ruby_blocks": "Ruby Blocks"

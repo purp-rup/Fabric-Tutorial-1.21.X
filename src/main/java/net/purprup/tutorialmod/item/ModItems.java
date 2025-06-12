@@ -18,27 +18,37 @@ public class ModItems
     public static final Item RAW_RUBY = registerItem("raw_ruby", Item::new, new Item.Settings());
     public static final Item CHISEL = registerItem("chisel", ChiselItem::new, new Item.Settings().maxDamage(32));
 
-    public static final Item RUBY_HELMET = registerItem(
-            "ruby_helmet",
-            settings -> new ArmorItem(ModArmorMaterials.INSTANCE, EquipmentType.HELMET, settings),
-            new Item.Settings().maxDamage(EquipmentType.HELMET.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
-    );
-    public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate",
-            settings -> new ArmorItem(ModArmorMaterials.INSTANCE, EquipmentType.CHESTPLATE, settings),
-            new Item.Settings().maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
-    );
+//    public static final Item RUBY_HELMET = Items.register(
+//            "ruby_helmet",
+//            settings -> new ArmorItem(ModArmorMaterials.RUBY, EquipmentType.HELMET, settings),
+//            new Item.Settings().maxDamage(EquipmentType.HELMET.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
+//    );
+//    public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate",
+//            settings -> new ArmorItem(ModArmorMaterials.RUBY, EquipmentType.CHESTPLATE, settings),
+//            new Item.Settings().maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
+//    );
+//
+//    public static final Item RUBY_LEGGINGS = registerItem(
+//            "ruby_leggings",
+//            settings -> new ArmorItem(ModArmorMaterials.RUBY, EquipmentType.LEGGINGS, settings),
+//            new Item.Settings().maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
+//    );
+//
+//    public static final Item RUBY_BOOTS = registerItem(
+//            "ruby_boots",
+//            settings -> new ArmorItem(ModArmorMaterials.RUBY, EquipmentType.BOOTS, settings),
+//            new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
+//    );
 
-    public static final Item RUBY_LEGGINGS = registerItem(
-            "ruby_leggings",
-            settings -> new ArmorItem(ModArmorMaterials.INSTANCE, EquipmentType.LEGGINGS, settings),
-            new Item.Settings().maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
-    );
+    // TO MAKE CUSTOM ARMOR:
+    // - Goto ModArmorMaterials, create material
+    // - Come to ModItems, register them as below
+    // - Goto datagen/ModModelProvider and generateItemModels()
 
-    public static final Item RUBY_BOOTS = registerItem(
-            "ruby_boots",
-            settings -> new ArmorItem(ModArmorMaterials.INSTANCE, EquipmentType.BOOTS, settings),
-            new Item.Settings().maxDamage(EquipmentType.BOOTS.getMaxDamage(ModArmorMaterials.BASE_DURABILITY))
-    );
+    public static final Item RUBY_HELMET = Items.register("ruby_helmet", new Item.Settings().armor(ModArmorMaterials.RUBY, EquipmentType.HELMET));
+    public static final Item RUBY_CHESTPLATE = Items.register("ruby_chestplate", new Item.Settings().armor(ModArmorMaterials.RUBY, EquipmentType.CHESTPLATE));
+    public static final Item RUBY_LEGGINGS = Items.register("ruby_leggings", new Item.Settings().armor(ModArmorMaterials.RUBY, EquipmentType.LEGGINGS));
+    public static final Item RUBY_BOOTS = Items.register("ruby_boots", new Item.Settings().armor(ModArmorMaterials.RUBY, EquipmentType.BOOTS));
 
     // Add new items here!
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries)

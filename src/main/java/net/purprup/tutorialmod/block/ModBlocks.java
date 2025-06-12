@@ -14,6 +14,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.purprup.tutorialmod.TutorialMod;
+import net.purprup.tutorialmod.block.custom.PinkGarnetLampBlock;
 
 import java.util.function.Function;
 
@@ -44,6 +45,13 @@ public class ModBlocks
             "ruby_deepslate_ore",
             Block::new,
             AbstractBlock.Settings.create().strength(1.5f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE),
+            true
+    );
+
+    public static final Block PINK_GARNET_LAMP = registerBlockItem(
+            "pink_garnet_lamp",
+            PinkGarnetLampBlock::new,
+            AbstractBlock.Settings.create().strength(1f).luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0),
             true
     );
 

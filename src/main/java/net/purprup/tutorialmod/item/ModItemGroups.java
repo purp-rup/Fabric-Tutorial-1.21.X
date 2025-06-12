@@ -21,6 +21,11 @@ public class ModItemGroups
                         entries.add(ModItems.RAW_RUBY);
                         entries.add(ModItems.CHISEL);
 
+                        entries.add(ModItems.RUBY_HELMET);
+                        entries.add(ModItems.RUBY_CHESTPLATE);
+                        entries.add(ModItems.RUBY_LEGGINGS);
+                        entries.add(ModItems.RUBY_BOOTS);
+
                     }).build());
 
     public static final ItemGroup RUBY_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -32,6 +37,8 @@ public class ModItemGroups
                         entries.add(ModBlocks.RAW_RUBY_BLOCK);
                         entries.add(ModBlocks.RUBY_DEEPSLATE_ORE);
                         entries.add(ModBlocks.RUBY_ORE);
+
+                        entries.add(ModBlocks.PINK_GARNET_LAMP);
 
                     }).build());
 
