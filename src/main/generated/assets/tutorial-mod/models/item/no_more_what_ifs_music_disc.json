@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorial-mod:item/no_more_what_ifs_music_disc"
+  }
+}

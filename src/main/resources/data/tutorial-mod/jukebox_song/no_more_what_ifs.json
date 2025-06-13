@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.tutorial-mod.no_more_what_ifs_music_disc.desc"
+  },
+  "length_in_seconds": 240.0,
+  "sound_event": "tutorial-mod:no_more_what_ifs"
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.tutorial-mod.aria_of_the_soul_music_disc.desc"
+  },
+  "length_in_seconds": 170.0,
+  "sound_event": "tutorial-mod:aria_of_the_soul"
+}

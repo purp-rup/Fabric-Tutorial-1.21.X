@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorial-mod:item/life_will_change_music_disc"
+  }
+}

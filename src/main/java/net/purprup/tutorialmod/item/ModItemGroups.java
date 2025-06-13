@@ -26,6 +26,13 @@ public class ModItemGroups
                         entries.add(ModItems.RUBY_LEGGINGS);
                         entries.add(ModItems.RUBY_BOOTS);
 
+                        entries.add(ModItems.ARIA_OF_THE_SOUL_MUSIC_DISC);
+                        entries.add(ModItems.BLUES_IN_VELVET_ROOM_MUSIC_DISC);
+                        entries.add(ModItems.LIFE_WILL_CHANGE_MUSIC_DISC);
+                        entries.add(ModItems.NO_MORE_WHAT_IFS_MUSIC_DISC);
+
+                        entries.add(ModItems.MICHAEL_SPAWN_EGG);
+
                     }).build());
 
     public static final ItemGroup RUBY_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,

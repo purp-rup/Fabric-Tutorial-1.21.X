@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.item.Items;
 import net.minecraft.text.Text;
@@ -11,6 +12,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.purprup.tutorialmod.block.ModBlocks;
 import net.purprup.tutorialmod.component.ModDataComponentTypes;
+import net.purprup.tutorialmod.entity.ModEntities;
+import net.purprup.tutorialmod.entity.custom.MichaelEntity;
 import net.purprup.tutorialmod.item.ModArmorMaterials;
 import net.purprup.tutorialmod.item.ModItemGroups;
 import net.purprup.tutorialmod.item.ModItems;
@@ -32,6 +35,7 @@ public class TutorialMod implements ModInitializer
 		ModDataComponentTypes.registerDataComponentTypes();
 		ModArmorMaterials.registerModArmorMaterials();
 		ModSounds.registerSounds();
+		ModEntities.registerModEntities();
 
 		// Use end rod on sheep :)
 		UseEntityCallback.EVENT.register((playerEntity, world, hand, entity, entityHitResult) -> {
@@ -48,5 +52,7 @@ public class TutorialMod implements ModInitializer
 			}
 			return ActionResult.PASS;
 		});
+
+		FabricDefaultAttributeRegistry.register(ModEntities.MICHAEL, MichaelEntity.createAttributes());
 	}
 }

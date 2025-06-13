@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorial-mod:item/blues_in_velvet_room_music_disc"
+  }
+}

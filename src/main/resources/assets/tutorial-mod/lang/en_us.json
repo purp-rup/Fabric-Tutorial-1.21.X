@@ -8,6 +8,8 @@
   "item.tutorial-mod.ruby_leggings": "Ruby Leggings",
   "item.tutorial-mod.ruby_boots": "Ruby Boots",
 
+  "item.tutorial-mod.michael_spawn_egg": "Michael Spawn Egg",
+
   "block.tutorial-mod.ruby_block": "Ruby Block",
   "block.tutorial-mod.raw_ruby_block": "Raw Ruby Block",
   "block.tutorial-mod.ruby_ore": "Ruby Ore",
@@ -15,5 +17,19 @@
   "block.tutorial-mod.pink_garnet_lamp": "Pink Garnet Lamp",
 
   "itemgroup.tutorialmod.ruby_items": "Ruby Items",
-  "itemgroup.tutorialmod.ruby_blocks": "Ruby Blocks"
+  "itemgroup.tutorialmod.ruby_blocks": "Ruby Blocks",
+
+  "item.tutorial-mod.aria_of_the_soul_music_disc": "Aria of the Soul Music Disc",
+  "item.tutorial-mod.aria_of_the_soul_music_disc.desc": "Persona 3 - Aria of the Soul",
+
+  "item.tutorial-mod.blues_in_velvet_room_music_disc": "Blues in Velvet Room Music Disc",
+  "item.tutorial-mod.blues_in_velvet_room_music_disc.desc": "Persona 3 - Blues in Velvet Room",
+
+  "item.tutorial-mod.no_more_what_ifs_music_disc": "No More What Ifs Music Disc",
+  "item.tutorial-mod.no_more_what_ifs_music_disc.desc": "Persona 5 - No More What Ifs Music Disc",
+
+  "item.tutorial-mod.life_will_change_music_disc": "Life Will Change Music Disc",
+  "item.tutorial-mod.life_will_change_music_disc.desc": "Persona 5 - Life Will Change Music Disc",
+
+  "entity.tutorial-mod.michael": "Michael"
 }

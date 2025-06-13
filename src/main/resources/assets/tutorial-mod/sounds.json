@@ -4,5 +4,37 @@
     "sounds": [
       "tutorial-mod:chisel_use"
     ]
+  },
+  "aria_of_the_soul": {
+    "sounds": [
+      {
+        "name": "tutorial-mod:aria_of_the_soul",
+        "stream": true
+      }
+    ]
+  },
+  "life_will_change": {
+    "sounds": [
+      {
+        "name": "tutorial-mod:life_will_change",
+        "stream": true
+      }
+    ]
+  },
+  "no_more_what_ifs": {
+    "sounds": [
+      {
+        "name": "tutorial-mod:no_more_what_ifs",
+        "stream": true
+      }
+    ]
+  },
+  "blues_in_velvet_room": {
+    "sounds": [
+      {
+        "name": "tutorial-mod:blues_in_velvet_room",
+        "stream": true
+      }
+    ]
   }
 }
