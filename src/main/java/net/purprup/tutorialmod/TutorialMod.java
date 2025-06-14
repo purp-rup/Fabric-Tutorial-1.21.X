@@ -13,6 +13,7 @@ import net.minecraft.util.math.Vec3d;
 import net.purprup.tutorialmod.block.ModBlocks;
 import net.purprup.tutorialmod.component.ModDataComponentTypes;
 import net.purprup.tutorialmod.entity.ModEntities;
+import net.purprup.tutorialmod.entity.custom.MessageEntity;
 import net.purprup.tutorialmod.entity.custom.MichaelEntity;
 import net.purprup.tutorialmod.item.ModArmorMaterials;
 import net.purprup.tutorialmod.item.ModItemGroups;
@@ -54,5 +55,6 @@ public class TutorialMod implements ModInitializer
 		});
 
 		FabricDefaultAttributeRegistry.register(ModEntities.MICHAEL, MichaelEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.MESSAGE, MessageEntity.createMobAttributes());
 	}
 }

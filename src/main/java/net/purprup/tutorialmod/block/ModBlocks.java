@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.StairsBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -54,6 +55,11 @@ public class ModBlocks
             AbstractBlock.Settings.create().strength(1f).luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0),
             true
     );
+
+//    public static final Block PINK_GARNET_STAIRS = registerBlockItem(
+//            "pink_garnet_stairs",
+//            new StairsBlock(ModBlocks)
+//    )
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries)
     {
