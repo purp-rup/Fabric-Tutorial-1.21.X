@@ -27,19 +27,20 @@ public class MessageEntityModel extends EntityModel<MessageRenderState>
         this.lines = this.message.getChild("lines");
         this.text = this.message.getChild("text");
     }
+
     public static TexturedModelData getTexturedModelData()
     {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
         ModelPartData message = modelPartData.addChild("message", ModelPartBuilder.create(), ModelTransform.rotation(0.0F, 0F, 0F));
 
-        ModelPartData lines = message.addChild("lines", ModelPartBuilder.create().uv(0, 31).cuboid(-1.0F, -1.0F, -15.0F, 2.0F, 1.0F, 30.0F, new Dilation(0.0F))
-                .uv(68, 0).cuboid(4.0F, -1.0F, -9.0F, 2.0F, 1.0F, 18.0F, new Dilation(0.0F))
-                .uv(56, 62).cuboid(-6.0F, -1.0F, -12.0F, 2.0F, 1.0F, 24.0F, new Dilation(0.0F)), ModelTransform.rotation(0.0F, 0.0F, 0.0F));
+        ModelPartData lines = message.addChild("lines", ModelPartBuilder.create().uv(0, 31).cuboid(-1.0F, 22F, -15.0F, 2.0F, 1.0F, 30.0F, new Dilation(0.0F))
+                .uv(68, 0).cuboid(4.0F, 22F, -9.0F, 2.0F, 1.0F, 18.0F, new Dilation(0.0F))
+                .uv(56, 62).cuboid(-6.0F, 22F, -12.0F, 2.0F, 1.0F, 24.0F, new Dilation(0.0F)), ModelTransform.rotation(0.0F, 0.0F, 0.0F));
 
-        ModelPartData text = message.addChild("text", ModelPartBuilder.create().uv(0, 0).cuboid(-2.0F, -2.0F, -15.0F, 4.0F, 1.0F, 30.0F, new Dilation(0.0F))
-                .uv(64, 31).cuboid(3.0F, -2.0F, -9.0F, 4.0F, 1.0F, 18.0F, new Dilation(0.0F))
-                .uv(0, 62).cuboid(-7.0F, -2.0F, -12.0F, 4.0F, 1.0F, 24.0F, new Dilation(0.0F)), ModelTransform.rotation(0.0F, 0.0F, 0.0F));
+        ModelPartData text = message.addChild("text", ModelPartBuilder.create().uv(0, 0).cuboid(-2.0F, 21.0F, -15.0F, 4.0F, 1.0F, 30.0F, new Dilation(0.0F))
+                .uv(64, 31).cuboid(3.0F, 21.0F, -9.0F, 4.0F, 1.0F, 18.0F, new Dilation(0.0F))
+                .uv(0, 62).cuboid(-7.0F, 21.0F, -12.0F, 4.0F, 1.0F, 24.0F, new Dilation(0.0F)), ModelTransform.rotation(0.0F, 0.0F, 0.0F));
         return TexturedModelData.of(modelData, 128, 128);
     }
 

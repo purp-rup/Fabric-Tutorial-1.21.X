@@ -19,7 +19,7 @@ public class ModEntities
     public static final EntityType<MessageEntity> MESSAGE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(TutorialMod.MOD_ID, "message"),
             EntityType.Builder.create(MessageEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(1f, 1f).build(MessageEntity.MESSAGE_KEY)
+                    .dimensions(0.2f, 0.2f).build(MessageEntity.MESSAGE_KEY)
     );
 
     public static void registerModEntities()
